@@ -1,0 +1,5 @@
+name = Site Deployment
+description = Deployment module, will be used to automate the release process
+package = Deployment
+core = 7.x
+version = "7.x"

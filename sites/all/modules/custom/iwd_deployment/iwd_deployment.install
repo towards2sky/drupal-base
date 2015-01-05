@@ -1,0 +1,25 @@
+<?php 
+
+/**
+ * @file Insall/Update file for deployment module which will be used for updating database settings
+ */
+
+
+/**
+ * Implements hook_install().
+ */
+
+function iwd_deployment_install(){
+    for ($i = 7000; $i < 8000; $i++) {
+        $func = 'iwd_deployment_update_' . $i;
+        if (function_exists($func)) {
+            $func();
+        }
+    }
+}
+
+/**
+ * Implements hook_update()
+ * Update the basic site information and disable dev based module
+ */
+
